@@ -1,24 +1,16 @@
-# README
+# Run
+```
+bundle install
+rake db:setup && rake db:seed
+rails s
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Test
+```
+rspec
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Data
+```
+GET /suggestions?q=Tetri&minprice=10&maxprice=100&cat=1
+```

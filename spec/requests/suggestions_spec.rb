@@ -22,5 +22,4 @@ describe 'GET Suggestions', type: :request do
     expect(response.body).to include "[]"
   end
 
-
 end

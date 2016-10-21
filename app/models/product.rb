@@ -5,19 +5,20 @@ class Product < ApplicationRecord
       case key.to_sym
       when :q # regexp search
         scope.where(["name LIKE ?", "%#{value}%"])
-      when :minprice # direct search
+      when :minprice # min price filter
         scope.where("price >= #{value}")
-      when :maxprice # direct search
+      when :maxprice # max price filter
         scope.where("price <= #{value}")
-      when :cat # direct search
+      when :cat # category filter
         scope.where("category = #{value}")
-      else # unknown key (do nothing or raise error, as you prefer to)
+      else # return scope or empty array
         scope || []
       end
     end
   end
 
   def translate_category(category)
+    # Translate category to en and es with i18n
     category = {
       'id' => p.category, 
       'trans' => {

@@ -1,24 +1,23 @@
-# Run
+# My solution for requirements below
+
+## Run
 ```
 bundle install
 rake db:setup && rake db:seed
 rails s
 ```
 
-# Test
+## Test
 ```
 rspec
 ```
 
-# Data
+## Data
 ```
 GET /suggestions?q=Tetri&minprice=10&maxprice=100&cat=1
 ```
 
-
-# Requirements:
-
-### Dentalzon Coding Challenge
+### Coding Challenge Description
 
 Design an API endpoint that provides auto-complete suggestions for products.
 

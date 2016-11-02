@@ -17,14 +17,4 @@ class Product < ApplicationRecord
     end
   end
 
-  def translate_category(category)
-    # Translate category to en and es with i18n
-    category = {
-      'id' => p.category, 
-      'trans' => {
-        'en' => (I18n.t "cat.#{p.category}"), 
-        'es' => (I18n.t "cat.#{p.category}", locale: :es)
-    }}
-  end
-
 end
